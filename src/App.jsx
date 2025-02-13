@@ -9,6 +9,9 @@ import Calender from './pages/Calender';
 import News from './pages/News';
 import Blog from './pages/Blog';
 import PageNotFound from './pages/PageNotFound';
+import Profile from './pages/Profile';
+import MySettings from './pages/MySettings';
+import MyAccount from './pages/MyAccount';
 const App = () => {
   return (
     <BrowserRouter>
@@ -21,7 +24,12 @@ const App = () => {
             <Route path='/calender' element={<Calender/>}/>
             <Route path='/news' element={<News/>}/>
             <Route path='/blog' element={<Blog/>}/>
+            <Route path='/profile' element={<Profile/>}>
+            <Route path='/profile/myaccount' element={<MyAccount/>}></Route>
+            <Route path='/profile/mysetting' element={<MySettings/>}></Route>
+            </Route>
             <Route path='*' element={<PageNotFound/>}/>
+            
         </Routes>
     </BrowserRouter>
   )
